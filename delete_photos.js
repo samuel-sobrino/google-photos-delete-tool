@@ -27,6 +27,10 @@ let buttons = {
     confirmationButton: null
 }
 
+//debug
+console.log("[DEBUG] start");
+
+//boucle
 let deleteTask = setInterval(() => {
     let attemptCount = 1;
 
@@ -35,6 +39,8 @@ let deleteTask = setInterval(() => {
 
     } while (checkboxes.length <= 0 && attemptCount++ < MAX_RETRIES);
 
+	//debug
+	console.log("[DEBUG] checkbox length : "+checkboxes.length);
 
     if (checkboxes.length <= 0) {
         console.log("[INFO] No more images to delete.");
@@ -62,6 +68,7 @@ let deleteTask = setInterval(() => {
             buttons.confirmation_button.click();
 
             console.log(`[INFO] ${imageCount}/${maxImageCount} Deleted`);
+			//si on spécifie un nombre pour maxImageCount on passe dans ce test
             if (maxImageCount !== "ALL_PHOTOS" && imageCount >= parseInt(maxImageCount)) {
                 console.log(`${imageCount} photos deleted as requested`);
                 clearInterval(deleteTask);
