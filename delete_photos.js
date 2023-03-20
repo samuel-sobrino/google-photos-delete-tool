@@ -7,8 +7,8 @@ const maxImageCount = "ALL_PHOTOS";
 const ELEMENT_SELECTORS = {
     checkboxClass: '.ckGgle',
     languageAgnosticDeleteButton: 'div[data-delete-origin] button',
-    deleteButton: 'button[aria-label="Delete"]',
-	deleteButtonFR: 'button[aria-label="Supprimer"]',
+	deleteButton: '#yDmH0d > c-wiz > div.u5a4d.QtDoYb.KWdEHf.g7of6e.maPcY > div > div.c9yG5b.txMZRd > div > div:nth-child(3) > span > button',
+	// deux fenêtre de confirmation possible au milieu et en-haut
 	confirmationButton: '#yDmH0d > div.llhEMd.iWO5td > div > div.g3VIld.V639qd.OFqiSb.Up8vH.Whe8ub.J9Nfi.iWO5td > div.XfpsVe.J9fJmf > button.VfPpkd-LgbsSe.VfPpkd-LgbsSe-OWXEXe-k8QpJ.nCP5yc.AjY5Oe.LQeN7.kHssdc.HvOprf',
 	confirmationButtonBackup: '#yDmH0d > div.llhEMd.iWO5td > div > div.g3VIld.V639qd.bvQPzd.oEOLpc.Up8vH.J9Nfi.A9Uzve.iWO5td > div.XfpsVe.J9fJmf > button.VfPpkd-LgbsSe.VfPpkd-LgbsSe-OWXEXe-k8QpJ.nCP5yc.AjY5Oe.LQeN7.kHssdc.HvOprf'
 }
@@ -62,13 +62,8 @@ let deleteTask = setInterval(() => {
             buttons.deleteButton = document.querySelector(ELEMENT_SELECTORS['languageAgnosticDeleteButton']);
             buttons.deleteButton.click();
         } catch {
-			try {
-				buttons.deleteButton = document.querySelector(ELEMENT_SELECTORS['deleteButton']);
-				buttons.deleteButton.click();
-			} catch {
-				buttons.deleteButton = document.querySelector(ELEMENT_SELECTORS['deleteButtonFR']);
-				buttons.deleteButton.click();
-			}
+			buttons.deleteButton = document.querySelector(ELEMENT_SELECTORS['deleteButton']);
+			buttons.deleteButton.click();
         }
 
         setTimeout(() => {
