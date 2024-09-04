@@ -10,7 +10,7 @@ const ELEMENT_SELECTORS = {
 	deleteButton: '#yDmH0d > c-wiz > div.u5a4d.QtDoYb.KWdEHf.g7of6e.maPcY > div > div.c9yG5b.txMZRd > div > div:nth-child(3) > span > button',
 	// deux fenêtre de confirmation possible au milieu et en-haut
 	confirmationButton: '#yDmH0d > div.llhEMd.iWO5td > div > div.g3VIld.V639qd.OFqiSb.Up8vH.Whe8ub.J9Nfi.iWO5td > div.XfpsVe.J9fJmf > button.VfPpkd-LgbsSe.VfPpkd-LgbsSe-OWXEXe-k8QpJ.nCP5yc.AjY5Oe.LQeN7.kHssdc.HvOprf',
-	confirmationButtonBackup: '#yDmH0d > div.llhEMd.iWO5td > div > div.g3VIld.V639qd.bvQPzd.oEOLpc.Up8vH.J9Nfi.A9Uzve.iWO5td > div.XfpsVe.J9fJmf > button.VfPpkd-LgbsSe.VfPpkd-LgbsSe-OWXEXe-k8QpJ.nCP5yc.AjY5Oe.LQeN7.kHssdc.HvOprf'
+	confirmationButton: 'div[aria-modal="true"] > div > div > div > button:nth-of-type(2)'
 }
 
 // Time Configuration (in milliseconds)
